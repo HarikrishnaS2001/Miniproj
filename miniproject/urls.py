@@ -19,7 +19,7 @@ from spamapp.models import spammail
 from spamapp.views import display, spam
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('display',display),
-    path('spamdetection',spam),
+    path('/admin/', admin.site.urls),
+    path('/display/',display),
+    path('',spam),
 ]

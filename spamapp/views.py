@@ -14,8 +14,12 @@ def spam(request):
         form = email_form(request.POST)
         if form.is_valid():
             email=form.cleaned_data['Email_Body']
-            email= email+' is a '+ nb(email) + '  email'
-            return render(request,'email.html',{'Mail':email})
+            if(nb(email)=='ham'):
+                email= email+' is a '+ nb(email) + '  email'
+                return render(request,'ham.html',{'Mail':email})
+            else:
+                email= email+' is a '+ nb(email) + '  email'
+                return render(request,'spam.html',{'Mail':email})               
         else:
             return render(request,'email.html',{'status':'failure'})
     else:
