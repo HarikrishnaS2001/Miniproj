@@ -2,7 +2,7 @@
 <head>
 <style>
     body {
-        background-image: url(https://wallpaperaccess.com/full/2579667.jpg);
+        /* background-image: url(https://wallpaperaccess.com/full/2579667.jpg); */
         background-position: center;
     margin: auto;
     max-width: 350px;
@@ -14,23 +14,34 @@
     
     .email{
     color: rgb(10, 127, 190);
-    padding-left: 27px;
+    text-align: center;
     font-size: large;
     }
     .submit{
         text-align: center;
-        padding-right: 65px;
+    }
+    .image{
+        padding-top: 2%;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        width: 100%;
+        margin: auto;
     }
 </style> 
 <title>Email Spam Detector</title>
 </head>
-<h1 style="color:rgb(1, 8, 8)">Email spam Classifier</h1>
+<h1 style="color:rgb(1, 8, 8)">EMAIL SPAM CLASSIFIER</h1>
 <body>
 <form method="post">
 {%csrf_token%}
 <div class="email">{{form.as_p}}</div>
-<div class="submit"><input type="submit" value="submit" ></div>
+<div class="submit"><input type="submit" value="SUBMIT" >
+</div>
 </form>
+<div class="image">
+    <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/85/2013/10/05134808/21.gif" alt="MAIL CLASSIFIER" width="480px">
+    </div>
 {% if status %}
 <h2>Status : {{status}}</h2>
 {% endif %}

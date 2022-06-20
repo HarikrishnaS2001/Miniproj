@@ -7,9 +7,13 @@
         text-align: center;
     }
 .ham{
-    background-color: green;
+    /* background-color: green; */
     padding-bottom: 500px;
     margin: auto;
+}
+.image{
+    text-align: center;
+    width: 100%;
 }
 </style>
 <body>
@@ -19,9 +23,14 @@
 {% endfor %} -->
 <div class="ham">
 {% if Mail %}
+<div>
 <img src="https://image3.mouthshut.com/images/imagesp/925814430s.jpg" alt="Sastra Logo" width="50px" height="50px">
 <h2 >{{Mail}}</h2>
+</div>
+<div class="image">
+    <img src="https://i.gifer.com/QHTn.gif" alt="Ham" width="25%">
+</div>
 {% endif %}
-</div>s
+</div>
 </body>
 </html>
